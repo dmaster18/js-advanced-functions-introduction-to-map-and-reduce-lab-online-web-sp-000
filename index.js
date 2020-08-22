@@ -44,7 +44,7 @@ function reduceToTotal(values, startingPoint = 0) {
 function reduceToAllTrue(values) {
   let truthyValue;
   for (let i = 0; i < values.length; i++) {
-    if (values[i] == true) {
+    if (Boolean(values[i]) == true) {
       truthyValue = true;
     } else {
       truthyValue = false;
@@ -56,7 +56,7 @@ function reduceToAllTrue(values) {
 
 function reduceToAnyTrue(values) {
   for (let i = 0; i < values.length; i++) {
-    if (values[i] == true) {
+    if (Boolean(values[i]) == true) {
       return true;
       break;
     } else {
