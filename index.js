@@ -55,12 +55,14 @@ function reduceToAllTrue(values) {
 }
 
 function reduceToAnyTrue(values) {
+  let truthyValue;
   for (let i = 0; i < values.length; i++) {
     if (Boolean(values[i]) == true) {
-      return true;
+      truthyValue = true;
       break;
     } else {
-      return false;
+      truthyValue = false;
     }
   }
+  return truthyValue;
 }
