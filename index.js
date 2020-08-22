@@ -42,14 +42,16 @@ function reduceToTotal(values, startingPoint = 0) {
 }
 
 function reduceToAllTrue(values) {
+  let truthyValue;
   for (let i = 0; i < values.length; i++) {
     if (values[i] == true) {
-      return true;
+      truthyValue = true;
     } else {
-      return false;
+      truthyValue = false;
       break;
     }
   }
+    return truthyValue;
 }
 
 function reduceToAnyTrue(values) {
